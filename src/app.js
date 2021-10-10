@@ -1,9 +1,9 @@
 const config = require('./config');
 
+const authRouter = require('./routers/auth.routes');
+
 const app = config();
 
-app.get('/', (req, res) => {
-  res.send({ success: true });
-});
+app.use('/auth', authRouter);
 
 module.exports = app;
