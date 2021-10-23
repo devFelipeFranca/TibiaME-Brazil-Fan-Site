@@ -4,6 +4,6 @@ const { authUserToGetToken } = require('../middleware/auth');
 
 const { sendToken } = require('../controllers/');
 
-router.post('/', authUserToGetToken, sendToken);
+router.post('/token', authUserToGetToken, sendToken);
 
 module.exports = router;
